@@ -28,6 +28,16 @@
   <script>
     //
     let accordionItems = document.querySelectorAll('.item');
+    let answerItem = document.querySelector('.itemQuestion + .itemAns');
+    accordionItems.forEach(toggleAnswer);
+
+    function toggleAnswer(item){
+      item.addEventListener('click',tomama = (answerItem) => answerItem.classList.toggle('hide') )
+    }
+
+    function tomama(){
+      console.log('hello')
+    }
 
   </script>
 </body>
