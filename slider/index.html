@@ -9,13 +9,69 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-slate-500 dark:bg-gray-900">
 
-    <div id="slideshow" class="max-w-3xl mx-auto mt-10 h-[30rem] flex relative">
-        <div class="slide bg-red-100 h-full w-full absolute"></div>
-        <div class="slide bg-red-600 h-full w-full absolute"></div>
-        <div class="slide bg-red-900 h-full w-full absolute"></div>
+    <div id="slideshow" class="max-w-3xl mx-auto mt-10 h-[30rem] flex relative overflow-x-hidden ">
+        <div class="slide bg-red-100 dark:bg-sky-900 h-full w-[600rem] "></div>
+        <div class="slide bg-red-600 dark:bg-sky-800 h-full w-full "></div>
+        <div class="slide bg-red-900 dark:bg-blue-500 h-full w-full "></div>
     </div>
+
+    <script>
+        function Book(title, author, pages, read) {
+            this.title = title;
+            this.author = author;
+            this.pages = pages;
+            this.read = read;
+            this.info = function (title, author) {
+                console.log(this.title + " has been written by " + this.author);
+            };
+            this, returnReadStatus = function (read) {
+                return 123;
+            }
+        }
+
+        const StudyInScarlet = new Book('Study in scarlet', 'Sir Arthur Conan Doyle', 523, 'Yes');
+        const TheLastVampire = new Book('The Last Vampire', 'Christopher Pike', 132, 'Yes')
+
+        console.log(StudyInScarlet.title);
+        console.log(TheLastVampire.title);
+
+        TheLastVampire.info();
+
+        // var zafer = 'hero';
+        // let totallength = zafer.length;
+        // let broken = zafer.split('');
+        // console.log(broken);
+        // let i = 0;
+        // let reverse = [];
+        // let reverseRewrite;
+        // while (i < totallength) {
+        //     console.log(i);
+        //     let popped = broken.pop()
+        //     console.log(popped);
+        //     reverse.push(popped);
+        //     reverseRewrite = '' + popped;
+        //     console.log(reverseRewrite);
+        //     console.log(reverse);
+        //     i++;
+        // }
+        // console.log(reverseRewrite);
+
+        function reverseWriting(str) {
+            totallength = str.length;
+            let stringBroken = str.spit('');
+            let i = 0;
+            let reverseRewrite = '';
+            if (i < totallength) {
+                let popped = stringBroken.pop();
+                reverseRewrite = reverseRewrite + popped;
+                i++
+            } else {
+                return reverseRewrite;
+            }
+        }
+    </script>
 
 </body>
 
