@@ -59,18 +59,19 @@
         // console.log(reverseRewrite);
 
         function reverseWriting(str) {
-            totallength = str.length;
-            let stringBroken = str.spit('');
+            let totallength = str.length;
+            let stringBroken = str.split('');
             let i = 0;
             let reverseRewrite = '';
-            if (i < totallength) {
+            while (i < totallength) {
                 let popped = stringBroken.pop();
                 reverseRewrite = reverseRewrite + popped;
                 i++
-            } else {
-                return reverseRewrite;
             }
+            // console.log(reverseRewrite);
+            return reverseRewrite;
         }
+        reverseWriting("tomama");
     </script>
 
 </body>
