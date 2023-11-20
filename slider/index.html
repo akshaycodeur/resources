@@ -58,20 +58,12 @@
         // }
         // console.log(reverseRewrite);
 
-        function reverseWriting(str) {
-            let totallength = str.length;
-            let stringBroken = str.split('');
-            let i = 0;
-            let reverseRewrite = '';
-            while (i < totallength) {
-                let popped = stringBroken.pop();
-                reverseRewrite = reverseRewrite + popped;
-                i++
-            }
-            // console.log(reverseRewrite);
-            return reverseRewrite;
+        function reverseSentance(str) {
+            let splitSentance = str.split('');
+            console.log('This is the splitted version of your string' + /n+ str +/n + splitSentance)
         }
-        reverseWriting("tomama");
+
+        reverseSentance('torma')
     </script>
 
 </body>
