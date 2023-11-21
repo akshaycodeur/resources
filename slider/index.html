@@ -18,26 +18,26 @@
     </div>
 
     <script>
-        function Book(title, author, pages, read) {
-            this.title = title;
-            this.author = author;
-            this.pages = pages;
-            this.read = read;
-            this.info = function (title, author) {
-                console.log(this.title + " has been written by " + this.author);
-            };
-            this, returnReadStatus = function (read) {
-                return 123;
-            }
-        }
+        // function Book(title, author, pages, read) {
+        //     this.title = title;
+        //     this.author = author;
+        //     this.pages = pages;
+        //     this.read = read;
+        //     this.info = function (title, author) {
+        //         console.log(this.title + " has been written by " + this.author);
+        //     };
+        //     this, returnReadStatus = function (read) {
+        //         return 123;
+        //     }
+        // }
 
-        const StudyInScarlet = new Book('Study in scarlet', 'Sir Arthur Conan Doyle', 523, 'Yes');
-        const TheLastVampire = new Book('The Last Vampire', 'Christopher Pike', 132, 'Yes')
+        // const StudyInScarlet = new Book('Study in scarlet', 'Sir Arthur Conan Doyle', 523, 'Yes');
+        // const TheLastVampire = new Book('The Last Vampire', 'Christopher Pike', 132, 'Yes')
 
-        console.log(StudyInScarlet.title);
-        console.log(TheLastVampire.title);
+        // console.log(StudyInScarlet.title);
+        // console.log(TheLastVampire.title);
 
-        TheLastVampire.info();
+        // TheLastVampire.info();
 
         // var zafer = 'hero';
         // let totallength = zafer.length;
@@ -60,10 +60,20 @@
 
         function reverseSentance(str) {
             let splitSentance = str.split('');
-            console.log('This is the splitted version of your string' + /n+ str +/n + splitSentance)
+            console.log(splitSentance)
+            let reverseArray = splitSentance.reverse();
+            console.log(reverseArray);
+            let strLength = str.strLength
+            for (let i = 0; i < strLength; i++) {
+                let popped = reverseArray.pop();
+                let reversedString = '';
+                reversedString = reversedString + popped;
+                console.log(reversedString);
+                return reversedString;
+            }
         }
 
-        reverseSentance('torma')
+        reverseSentance('torma sa')
     </script>
 
 </body>
