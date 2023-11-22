@@ -60,16 +60,19 @@
 
         function reverseSentance(str) {
             let splitSentance = str.split('');
-            console.log(splitSentance)
+            console.log(splitSentance);
             let reverseArray = splitSentance.reverse();
             console.log(reverseArray);
-            let strLength = str.strLength
+            let strLength = str.length;
+            console.log(strLength);
             for (let i = 0; i < strLength; i++) {
+
                 let popped = reverseArray.pop();
-                let reversedString = '';
-                reversedString = reversedString + popped;
-                console.log(reversedString);
-                return reversedString;
+                console.log(popped);
+                // let reversedString = '';
+                // reversedString = reversedString + popped;
+                // console.log(reversedString);
+                // return reversedString;
             }
         }
 
