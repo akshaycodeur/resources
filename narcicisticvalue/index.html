@@ -16,12 +16,21 @@
             id="inputValue" placeholder="Enter text...">
         <button
             class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
-            onclick="reverseSentance()">Check if value is narcicistic</button>
-        <input type="text" id="result"
+            onclick="narcissistic()">Check if value is narcissistic</button>
+        <input id="result"
             class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 mt-5"
             value="">
     </div>
 
+    <script>
+        function narcissistic() {
+            let inputField = document.querySelector('#inputValue');
+            let valux = inputField.value;
+            let resultField = document.querySelector('#result');
+            let valueLength = valux.length;
+            resultField.value = valueLength;
+        }
+    </script>
 
 
 </body>
