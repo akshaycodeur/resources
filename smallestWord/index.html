@@ -27,9 +27,20 @@
             let inputField = document.querySelector('#inputValue');
             let valux = inputField.value;
             let resultField = document.querySelector('#result');
-            let brokenWords = valux.split();
-            console.log(brokenWords);
-            resultField.value = brokenWords;
+            let brokenWords = valux.split(' ');
+            let numberOfWords = brokenWords.length;
+            console.log(numberOfWords);
+            for (i = 0; i < numberOfWords; i++) {
+                let longestWord = ''
+                if (brokenWords[i].length > brokenWords[i + 1].length) {
+                    console.log(brokenWords[i]);
+                    longestWord = brokenWord[i];
+                } else {
+                    console.log(brokenWords[i + 1])
+                    longestWord = brokenWord[i + 1];
+                }
+            }
+            resultField.value = longestWord;
         }
     </script>
 
