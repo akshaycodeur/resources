@@ -30,14 +30,10 @@
             let brokenWords = valux.split(' ');
             let numberOfWords = brokenWords.length;
             console.log(numberOfWords);
-            for (i = 0; i < numberOfWords; i++) {
-                let longestWord = ''
-                if (brokenWords[i].length > brokenWords[i + 1].length) {
-                    console.log(brokenWords[i]);
-                    longestWord = brokenWord[i];
-                } else {
-                    console.log(brokenWords[i + 1])
-                    longestWord = brokenWord[i + 1];
+            let longestWord = brokenWords[0];
+            for (i = 1; i < numberOfWords; i++) {
+                if (brokenWords[i].length > longestWord.length) {
+                    longestWord = brokenWords[i];
                 }
             }
             resultField.value = longestWord;
