@@ -24,11 +24,20 @@
 
     <script>
         function mask() {
-            let inputField = document.querySelector('#inputValue');
-            let valux = inputField.value;
+            let inputField = document.querySelector('#inputValue').value;
+            let inputLength = inputField.length;
+            let brokenWord = inputField.split("");
+            console.log(brokenWord);
+            const ending = [];
+            for (i = 0; i < 4; i++) {
+                let popped = brokenWord.pop();
+                console.log(popped);
+                let last4 = ending.push(popped);
+            }
+            console.log(last4.reverse());
+            let reversed4 = last4.reverse();
+            console.log(reversed4);
             let resultField = document.querySelector('#result');
-            let valueLength = valux.length;
-            resultField.value = valueLength;
         }
     </script>
 
